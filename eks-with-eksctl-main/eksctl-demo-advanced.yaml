@@ -1,0 +1,79 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+  name: eks-demo
+  region: us-west-2
+  version: "1.25"
+
+iam:
+  withOIDC: true #EKS will create an OIDC (OpenID Connect) identity provider for the cluster
+  serviceAccounts: #Service accounts created by EKS for IRSA
+    - metadata:
+        name: loadbalancer-controller
+        namespace: kube-system
+        labels: { app: "aws-load-balancer-controller", managed_by: "eksctl" }
+      wellKnownPolicies:
+        awsLoadBalancerController: true
+      roleName: eks-poc-aws-loadbalancer-controller
+    - metadata:
+        name: external-dns
+        namespace: kube-system
+        labels: { app: "external-dns", managed_by: "eksctl" }
+      tags:
+        app: "external-dns"
+        managed_by: "eksctl"
+      wellKnownPolicies:
+        externalDNS: true
+      roleName: eks-poc-external-dns
+    - metadata:
+        name: k8s-cloudwatch-adapter
+        namespace: cloudwatch-metrics
+        labels: { app: "k8s-cloudwatch-metrics" }
+      tags:
+        app: "eks-poc-k8s-cloudwatch-metrics"
+        managed_by: "eksctl"
+      attachPolicyARNs:
+        - arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess
+    - metadata:
+        name: cert-manager
+        namespace: cert-manager
+        labels: { app: "cert-manager" }
+      tags:
+        app: "eks-poc-cert-manager"
+        managed_by: "eksctl"
+      wellKnownPolicies:
+        certManager: true
+
+addons:
+- name: vpc-cni
+  version: v1.12.2-eksbuild.1
+  attachPolicyARNs:
+  - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
+- name: kube-proxy
+  version: v1.25.6-eksbuild.1
+
+managedNodeGroups:
+  - name: generalCompute
+    instanceType: m5.large
+    minSize: 2
+    maxSize: 5
+    #maxPodsPerNode: 234 #Default 110, need more use this setting,Ref- https://www.middlewareinventory.com/blog/kubernetes-max-pods-per-node/
+    desiredCapacity: 2
+    volumeSize: 20
+    tags:
+      "Stage": "eks-poc"
+      "Type": "eks"
+    updateConfig:
+      maxUnavailablePercentage: 25
+    iam:
+      attachPolicyARNs: # https://eksctl.io/usage/iam-policies/#attaching-policies-by-arn
+        - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
+        - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
+        - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+        - arn:aws:iam::aws:policy/AmazonS3FullAccess
+        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+      withAddonPolicies:
+        autoScaler: true
+    ebsOptimized: true
+    volumeEncrypted: true
+    privateNetworking: true #EKS worker nodes are deployed in private subnets 
