@@ -1,0 +1,15 @@
+---
+ - name: remove softwares
+   hosts: all
+   tasks:
+
+    - name: remove apache
+      dnf:
+       name: httpd
+       state: absent
+
+    - name: remove git
+      dnf:
+       state: absent
+       name: git
+...

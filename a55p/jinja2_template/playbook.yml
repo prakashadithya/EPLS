@@ -1,0 +1,12 @@
+---
+ - name: use the jinja2 template
+   hosts: rhel
+   vars:
+    http_port: 80
+    admin: jerrish
+    content_dir: /var/www/html
+   tasks:
+    - name: copy the template
+      template:
+       src: httpd.j2 
+       dest: /etc/httpd/httpd.conf

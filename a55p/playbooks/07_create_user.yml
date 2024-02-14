@@ -1,0 +1,11 @@
+---
+ - name: create a user
+   hosts: all
+   tasks:
+    
+    - name: Add the user developer1
+      ansible.builtin.user:
+        name: developer1
+        state: present
+        password: $1$DJN71CPs$rQOfIaDIY9iQqjxMXNLKe.
+...

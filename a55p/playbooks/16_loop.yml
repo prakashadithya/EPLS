@@ -1,0 +1,20 @@
+---
+ - name: ensure list of users and softwares are '{{user_st}}' 
+   hosts: rhel
+   vars_files: ../variables/list.yml
+   tasks:
+
+    - name: ensure users are '{{user_st}}'
+      user:
+       name: '{{item}}'
+       groups: wheel,root
+       state: '{{user_st}}'
+      loop: '{{user_list}}'
+
+    - name: ensure softwares are '{{sw_st}}'
+      yum:
+       name: '{{item}}'
+       state: '{{sw_st}}'
+      loop: '{{sw_list}}'
+      when: ansible_facts["distribution"] == "RedHat"
+...

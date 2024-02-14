@@ -1,0 +1,31 @@
+---
+ - name: ensure {{group_name}} group is {{group_st}} and members are {{user_st}}
+   hosts: all
+   vars_files: ../variables/variables.yml
+   tasks:
+    
+    - name: ensure group is {{group_st}}
+      ansible.builtin.group:
+        name: '{{group_name}}'
+        state: '{{group_st}}'
+
+    - name: ensure user is {{user_st}}
+      ansible.builtin.user:
+        name: developer1
+        state: '{{user_st}}'
+        password: '{{user_pass}}'
+        groups: "{{group_name}}"
+
+    - name: ensure user is {{user_st}}
+      ansible.builtin.user:
+        name: developer2
+        state: '{{user_st}}'
+        password: '{{user_pass}}'
+        groups: '{{group_name}}'
+
+    - name: ensure user is {{user_st}}
+      ansible.builtin.user:
+        name: developer3
+        state: '{{user_st}}'
+        password: '{{user_pass}}'
+        groups: '{{group_name}}'

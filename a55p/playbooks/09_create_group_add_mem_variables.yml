@@ -1,0 +1,32 @@
+---
+ - name: create a group and add member
+   hosts: all
+   vars:
+    group_name: projecta
+   tasks:
+    
+    - name: add a group
+      ansible.builtin.group:
+        name: "{{group_name}}"
+        state: present
+
+    - name: Add the user developer1
+      ansible.builtin.user:
+        name: developer1
+        state: present
+        password: $1$DJN71CPs$rQOfIaDIY9iQqjxMXNLKe.
+        groups: "{{group_name}}"
+
+    - name: Add the user developer2
+      ansible.builtin.user:
+        name: developer2
+        state: present
+        password: $1$DJN71CPs$rQOfIaDIY9iQqjxMXNLKe.
+        groups: '{{group_name}}'
+
+    - name: Add the user developer3
+      ansible.builtin.user:
+        name: developer3
+        state: present
+        password: $1$DJN71CPs$rQOfIaDIY9iQqjxMXNLKe.
+        groups: '{{group_name}}'

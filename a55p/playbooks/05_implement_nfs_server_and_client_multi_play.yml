@@ -1,0 +1,46 @@
+---
+ - name: implement nfs server
+   hosts: ip-172-31-47-39.ap-south-1.compute.internal
+   tasks:
+
+    - name: install nfs software
+      dnf:
+       name: nfs-utils
+       state: present
+
+    - name: start and enable nfs service
+      service:
+       name: nfs-server
+       state: started
+       enabled: yes
+
+    - name: create a share directory
+      file:
+       path: /share100
+       state: directory
+
+    - name: make share configuration
+      lineinfile:
+       path: /etc/exports
+       line: '/share100 ip-172-31-41-129.ap-south-1.compute.internal(ro)'
+
+    - name: update the service
+      shell: 
+       cmd: exportfs -rv
+
+ - name: mount the share
+   hosts: ip-172-31-41-129.ap-south-1.compute.internal
+   tasks:
+
+    - name: install nfs-client software
+      dnf: 
+       name: nfs-utils
+       state: present
+
+    - name: mount the share directory locally
+      mount:
+       src: ip-172-31-47-39.ap-south-1.compute.internal:/share100
+       path: /mnt
+       state: mounted
+       fstype: nfs
+...

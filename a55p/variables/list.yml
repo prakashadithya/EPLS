@@ -1,0 +1,11 @@
+---
+ user_st: present
+ user_list:
+   - user1
+   - user2
+
+ sw_st: absent
+ sw_list:
+  - httpd
+  - tree
+  - vsftpd

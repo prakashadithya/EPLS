@@ -1,0 +1,26 @@
+ip-172-31-39-38.ap-south-1.compute.internal ansible_user=ec2-user  	#host variable 
+ip-172-31-47-188.ap-south-1.compute.internal
+
+[rhel]
+ip-172-31-39-38.ap-south-1.compute.internal
+ip-172-31-47-188.ap-south-1.compute.internal
+
+[ubuntu]
+ubuntu1 ansible_host=ip-172-31-17-119.ec2.internal 
+ubuntu2 ansible_host=ip-172-31-25-199.ec2.internal
+
+[windows2019]
+
+
+[rhel:vars]			            			                        #group variable
+ansible_user=ec2-user
+
+[ubuntu:vars]
+ansible_user=ubuntu
+
+[windows2019:vars]
+ansible_user=Administrator
+ansible_password=p@ssw0rd		            		                #use your windows target node password
+ansible_port=5986
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore

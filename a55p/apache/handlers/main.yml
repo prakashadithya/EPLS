@@ -1,0 +1,7 @@
+---
+# handlers file for apache
+    - name: start and enable service
+      service:
+       name: httpd
+       state: started
+       enabled: yes

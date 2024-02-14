@@ -1,0 +1,24 @@
+---
+ - name: ensure softwares are '{{sw_st}}' in rhel and ubuntu servers
+   hosts: all
+   vars:
+    sw_st: present
+   tasks:
+    
+    - name: ensure softwares are '{{sw_st}}'
+      dnf:
+       name: tree
+       state: '{{sw_st}}'
+      when: ansible_distribution == "RedHat" and ansible_kernel == "4.18.0-372.9.1.el8.x86_64"
+      register: output
+
+    - name: print
+      debug:
+       var: output
+
+    - name: ensure softwares are '{{sw_st}}'
+      apt:
+       name: apache2
+       state: '{{sw_st}}'
+      when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
+...

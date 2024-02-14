@@ -1,0 +1,10 @@
+---
+ - name: create a dir
+   hosts: all
+   tasks:
+
+    - name: create a dir
+      file:
+       path: /tmp/{{ansible_user}}
+       state: directory
+...

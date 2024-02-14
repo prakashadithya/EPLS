@@ -1,0 +1,27 @@
+---
+ - name: implement apache webserver
+   hosts: all
+   tasks:
+
+    - name: install apache software
+      dnf:
+       name: httpd
+       state: present
+
+    - name: start and enable service
+      service:
+       name: httpd
+       state: started
+       enabled: yes
+
+    - name: install git software
+      dnf:
+       state: present
+       name: git
+
+    - name: clone the sample website
+      git:
+       clone: yes
+       repo: https://github.com/jerrish/site_particles.git
+       dest: /var/www/html
+...

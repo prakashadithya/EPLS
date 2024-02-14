@@ -1,0 +1,14 @@
+---
+ - name: list the free ram and swap size
+   hosts: all
+   tasks:
+
+    - name: list the free ram and swap size
+      shell:
+        cmd: free -m
+      register: output
+    
+    - name: print the output 
+      debug:
+        var: output
+...

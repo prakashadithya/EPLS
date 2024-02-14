@@ -1,0 +1,31 @@
+---
+ - name: remove nfs server configurations
+   hosts: ip-172-31-47-39.ap-south-1.compute.internal
+   tasks:
+
+    - name: remove nfs software
+      dnf:
+       name: nfs-utils
+       state: absent
+
+    - name: remove directory
+      file:
+       path: /share100
+       state: absent
+
+ - name: remove nfs mount and nfs client
+   hosts: ip-172-31-41-129.ap-south-1.compute.internal
+   tasks:
+
+    - name: umount the share                
+      mount:
+       src: ip-172-31-47-39.ap-south-1.compute.internal:/share100
+       path: /mnt
+       state: absent  
+       fstype: nfs
+
+    - name: remove nfs software
+      dnf: 
+       name: nfs-utils
+       state: absent
+...

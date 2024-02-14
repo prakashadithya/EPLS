@@ -1,0 +1,35 @@
+#ping
+ansible all -m ping
+
+#create a directory
+ansible all -m file -a "path=/tmp/ansible state=directory"
+
+#create a file
+ansible all -m file -a "path=/tmp/ansible/file1.txt state=touch"
+
+#remove a directory
+ansible all -m file -a "path=/tmp/ansible state=absent"
+
+#list the files and directory
+ansible all -m command -a "ls -a /tmp"
+
+#execute a command through shell
+ansible all -m shell -a "cat /etc/passwd | grep sh$"
+
+#add a line to a file
+ansible all -m lineinfile -a "path=/etc/motd line='This is ansible class' state=present"
+
+#replace a line
+ansible all -m lineinfile -a "path=/etc/motd regex=^T line='This is terraform class'"
+
+#remove a line from a file
+ansible all -m lineinfile -a "path=/etc/motd line='This is terraform class' state=absent"
+
+#copy a file
+ansible all -m copy -a "src=../data/hello.txt dest=/tmp"
+
+#install a software
+ansible all -m dnf -a "name=httpd state=present"
+
+#start a service
+ansible all -m service -a "name=httpd state=started enabled=yes"

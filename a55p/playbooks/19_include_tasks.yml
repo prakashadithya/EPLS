@@ -1,0 +1,7 @@
+---
+ - name: demo on inclusion
+   hosts: rhel
+   tasks:
+    
+    - name: import from external file
+      include_tasks: webserver_tasks.yml

@@ -1,0 +1,6 @@
+---
+ - name: use the apache role
+   hosts: rhel
+   roles:
+    - ../apache
+    - ../docker

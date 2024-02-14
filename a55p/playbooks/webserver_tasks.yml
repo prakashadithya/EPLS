@@ -1,0 +1,5 @@
+---
+ - name: install apache
+   dnf:
+    ame: httpd
+    state: absent

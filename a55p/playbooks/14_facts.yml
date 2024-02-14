@@ -1,0 +1,10 @@
+---
+ - name: small
+   hosts: all
+   gather_facts: yes
+   tasks:
+
+    - name: print
+      debug:
+        var: ansible_facts['virtualization_type']
+...

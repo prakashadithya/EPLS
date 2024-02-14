@@ -1,0 +1,12 @@
+---
+# tasks file for apache
+    - name: install apache software
+      dnf:
+       name: '{{sw_name}}'
+       state: '{{sw_st}}'
+      notify: start and enable service
+
+   # - name: copy the template
+   #   template:
+  #   src: httpd.j2
+   #    dest: /etc/httpd/httpd.conf

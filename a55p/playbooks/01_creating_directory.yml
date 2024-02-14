@@ -1,0 +1,10 @@
+---
+ - name: create a directory in mumbai dc servers
+   hosts: all
+   tasks:
+    
+    - name: create a directory
+      file:
+        path: /tmp/ansible
+        state: directory
+...

@@ -1,0 +1,11 @@
+---
+ - name: delete a user
+   hosts: all
+   tasks:
+    
+    - name: remove the user developer1
+      ansible.builtin.user:
+        name: developer1
+        state: absent
+      # password: $1$DJN71CPs$rQOfIaDIY9iQqjxMXNLKe.
+...

@@ -1,0 +1,6 @@
+---
+ - name: implement apache webserver
+   import_playbook: 03_implement_apache_webserver.yml
+
+ - name: implement nfs server
+   import_playbook: 05_implement_nfs_server_and_client_multi_play.yml

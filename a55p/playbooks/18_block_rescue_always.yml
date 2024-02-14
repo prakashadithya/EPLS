@@ -1,0 +1,34 @@
+---
+ - name: creating logical block
+   hosts: rhel
+   tasks:
+
+    - block:
+   
+       - name: install ftp software
+         dnf:
+          name: vsftpd
+          state: present
+
+       - name: backup the config file
+         copy:
+          src: /etc/vsftpd/vsftpd.conf
+          dest: /tmp/backup.conf
+          
+      when: ansible_distribution == "RedHat" 
+
+      rescue:
+       
+       - name: run older version
+         dnf:
+          name: tree
+          state: present
+
+
+      always:
+       
+       - name: restart vsftpd
+         service:
+          name: vsftpd
+          state: restarted
+...
