@@ -1,0 +1,27 @@
+resource "aws_s3_bucket" "demo_bucket1" {
+  bucket = var.bucket_name
+  depends_on = [
+    time_sleep.wait_a_min
+  ]
+}
+
+resource "aws_s3_bucket" "demo_bucket2" {
+  bucket = var.bucket_name
+  depends_on = [
+    time_sleep.wait_a_min
+  ]
+}
+
+resource "aws_s3_bucket" "demo_bucket3" {
+  bucket = var.bucket_name
+  depends_on = [
+    time_sleep.wait_a_min
+  ]
+}
+
+resource "aws_s3_bucket" "demo_bucket4" {
+  bucket = var.bucket_name
+  depends_on = [
+    time_sleep.wait_a_min
+  ]
+}

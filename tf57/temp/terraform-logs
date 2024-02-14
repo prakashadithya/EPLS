@@ -1,0 +1,390 @@
+2023-02-04T18:08:21.738+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_vpc.demo_vpc, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .ipv6_ipam_pool_id: planned value cty.StringVal("") for a non-computed attribute
+      - .assign_generated_ipv6_cidr_block: planned value cty.False for a non-computed attribute
+      - .instance_tenancy: planned value cty.StringVal("default") for a non-computed attribute
+      - .enable_dns_support: planned value cty.True for a non-computed attribute
+      - .ipv6_netmask_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+2023-02-04T18:08:21.953+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_subnet.demo_subnet1, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .outpost_arn: planned value cty.StringVal("") for a non-computed attribute
+      - .assign_ipv6_address_on_creation: planned value cty.False for a non-computed attribute
+      - .ipv6_native: planned value cty.False for a non-computed attribute
+      - .customer_owned_ipv4_pool: planned value cty.StringVal("") for a non-computed attribute
+      - .map_customer_owned_ip_on_launch: planned value cty.False for a non-computed attribute
+      - .enable_dns64: planned value cty.False for a non-computed attribute
+      - .ipv6_cidr_block: planned value cty.StringVal("") for a non-computed attribute
+      - .enable_resource_name_dns_a_record_on_launch: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_aaaa_record_on_launch: planned value cty.False for a non-computed attribute
+2023-02-04T18:08:22.006+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_subnet.demo_subnet2, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .enable_dns64: planned value cty.False for a non-computed attribute
+      - .ipv6_cidr_block: planned value cty.StringVal("") for a non-computed attribute
+      - .enable_resource_name_dns_a_record_on_launch: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_aaaa_record_on_launch: planned value cty.False for a non-computed attribute
+      - .assign_ipv6_address_on_creation: planned value cty.False for a non-computed attribute
+      - .ipv6_native: planned value cty.False for a non-computed attribute
+      - .outpost_arn: planned value cty.StringVal("") for a non-computed attribute
+      - .customer_owned_ipv4_pool: planned value cty.StringVal("") for a non-computed attribute
+      - .map_customer_owned_ip_on_launch: planned value cty.False for a non-computed attribute
+2023-02-04T18:08:22.015+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_default_route_table.demo_vpc_default_rt, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .propagating_vgws: planned value cty.SetValEmpty(cty.String) for a non-computed attribute
+2023-02-04T18:08:22.035+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_security_group.demo_sg, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .revoke_rules_on_delete: planned value cty.False for a non-computed attribute
+2023-02-04T18:08:22.716+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_db_subnet_group.demo_db_subnet_group, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .description: planned value cty.StringVal("Managed by Terraform") for a non-computed attribute
+2023-02-04T18:08:23.019+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_db_instance.demo_database, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .security_group_names: planned value cty.SetValEmpty(cty.String) for a non-computed attribute
+      - .delete_automated_backups: planned value cty.True for a non-computed attribute
+      - .domain: planned value cty.StringVal("") for a non-computed attribute
+      - .publicly_accessible: planned value cty.False for a non-computed attribute
+      - .apply_immediately: planned value cty.False for a non-computed attribute
+      - .max_allocated_storage: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .deletion_protection: planned value cty.False for a non-computed attribute
+      - .replicate_source_db: planned value cty.StringVal("") for a non-computed attribute
+      - .domain_iam_role_name: planned value cty.StringVal("") for a non-computed attribute
+      - .iam_database_authentication_enabled: planned value cty.False for a non-computed attribute
+      - .storage_encrypted: planned value cty.False for a non-computed attribute
+      - .monitoring_interval: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .custom_iam_instance_profile: planned value cty.StringVal("") for a non-computed attribute
+      - .auto_minor_version_upgrade: planned value cty.True for a non-computed attribute
+      - .performance_insights_enabled: planned value cty.False for a non-computed attribute
+      - .tags: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .customer_owned_ip_enabled: planned value cty.False for a non-computed attribute
+      - .enabled_cloudwatch_logs_exports: planned value cty.SetValEmpty(cty.String) for a non-computed attribute
+      - .copy_tags_to_snapshot: planned value cty.False for a non-computed attribute
+2023-02-04T18:08:23.238+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_instance.demo_instance, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .source_dest_check: planned value cty.True for a non-computed attribute
+      - .get_password_data: planned value cty.False for a non-computed attribute
+      - .hibernation: planned value cty.False for a non-computed attribute
+      - .user_data_replace_on_change: planned value cty.False for a non-computed attribute
+      - .metadata_options: block count in plan (1) disagrees with count in config (0)
+      - .private_dns_name_options: block count in plan (1) disagrees with count in config (0)
+      - .root_block_device: block count in plan (1) disagrees with count in config (0)
+      - .credit_specification: block count in plan (1) disagrees with count in config (0)
+      - .enclave_options: block count in plan (1) disagrees with count in config (0)
+      - .maintenance_options: block count in plan (1) disagrees with count in config (0)
+      - .capacity_reservation_specification: block count in plan (1) disagrees with count in config (0)
+2023-02-04T18:09:59.039+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_vpc.demo_vpc, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .assign_generated_ipv6_cidr_block: planned value cty.False for a non-computed attribute
+      - .ipv6_ipam_pool_id: planned value cty.StringVal("") for a non-computed attribute
+      - .ipv6_netmask_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .instance_tenancy: planned value cty.StringVal("default") for a non-computed attribute
+      - .enable_dns_support: planned value cty.True for a non-computed attribute
+2023-02-04T18:09:59.129+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_subnet.demo_subnet1, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .ipv6_cidr_block: planned value cty.StringVal("") for a non-computed attribute
+      - .ipv6_native: planned value cty.False for a non-computed attribute
+      - .assign_ipv6_address_on_creation: planned value cty.False for a non-computed attribute
+      - .outpost_arn: planned value cty.StringVal("") for a non-computed attribute
+      - .enable_resource_name_dns_a_record_on_launch: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_aaaa_record_on_launch: planned value cty.False for a non-computed attribute
+      - .customer_owned_ipv4_pool: planned value cty.StringVal("") for a non-computed attribute
+      - .enable_dns64: planned value cty.False for a non-computed attribute
+      - .map_customer_owned_ip_on_launch: planned value cty.False for a non-computed attribute
+2023-02-04T18:09:59.279+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_subnet.demo_subnet2, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .assign_ipv6_address_on_creation: planned value cty.False for a non-computed attribute
+      - .outpost_arn: planned value cty.StringVal("") for a non-computed attribute
+      - .enable_resource_name_dns_a_record_on_launch: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_aaaa_record_on_launch: planned value cty.False for a non-computed attribute
+      - .map_customer_owned_ip_on_launch: planned value cty.False for a non-computed attribute
+      - .customer_owned_ipv4_pool: planned value cty.StringVal("") for a non-computed attribute
+      - .enable_dns64: planned value cty.False for a non-computed attribute
+      - .ipv6_cidr_block: planned value cty.StringVal("") for a non-computed attribute
+      - .ipv6_native: planned value cty.False for a non-computed attribute
+2023-02-04T18:09:59.299+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_default_route_table.demo_vpc_default_rt, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .propagating_vgws: planned value cty.SetValEmpty(cty.String) for a non-computed attribute
+2023-02-04T18:09:59.324+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_security_group.demo_sg, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .revoke_rules_on_delete: planned value cty.False for a non-computed attribute
+2023-02-04T18:09:59.653+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_db_subnet_group.demo_db_subnet_group, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .description: planned value cty.StringVal("Managed by Terraform") for a non-computed attribute
+2023-02-04T18:09:59.911+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_db_instance.demo_database, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .domain: planned value cty.StringVal("") for a non-computed attribute
+      - .enabled_cloudwatch_logs_exports: planned value cty.SetValEmpty(cty.String) for a non-computed attribute
+      - .replicate_source_db: planned value cty.StringVal("") for a non-computed attribute
+      - .performance_insights_enabled: planned value cty.False for a non-computed attribute
+      - .customer_owned_ip_enabled: planned value cty.False for a non-computed attribute
+      - .max_allocated_storage: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .monitoring_interval: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .security_group_names: planned value cty.SetValEmpty(cty.String) for a non-computed attribute
+      - .domain_iam_role_name: planned value cty.StringVal("") for a non-computed attribute
+      - .iam_database_authentication_enabled: planned value cty.False for a non-computed attribute
+      - .copy_tags_to_snapshot: planned value cty.False for a non-computed attribute
+      - .publicly_accessible: planned value cty.False for a non-computed attribute
+      - .delete_automated_backups: planned value cty.True for a non-computed attribute
+      - .storage_encrypted: planned value cty.False for a non-computed attribute
+      - .tags: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .deletion_protection: planned value cty.False for a non-computed attribute
+      - .auto_minor_version_upgrade: planned value cty.True for a non-computed attribute
+      - .custom_iam_instance_profile: planned value cty.StringVal("") for a non-computed attribute
+      - .apply_immediately: planned value cty.False for a non-computed attribute
+2023-02-04T18:10:00.367+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_instance.demo_instance, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .user_data_replace_on_change: planned value cty.False for a non-computed attribute
+      - .source_dest_check: planned value cty.True for a non-computed attribute
+      - .get_password_data: planned value cty.False for a non-computed attribute
+      - .hibernation: planned value cty.False for a non-computed attribute
+      - .enclave_options: block count in plan (1) disagrees with count in config (0)
+      - .maintenance_options: block count in plan (1) disagrees with count in config (0)
+      - .capacity_reservation_specification: block count in plan (1) disagrees with count in config (0)
+      - .metadata_options: block count in plan (1) disagrees with count in config (0)
+      - .private_dns_name_options: block count in plan (1) disagrees with count in config (0)
+      - .root_block_device: block count in plan (1) disagrees with count in config (0)
+      - .credit_specification: block count in plan (1) disagrees with count in config (0)
+2023-02-04T18:42:51.352+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_key_pair.demo_key, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .public_key: planned value cty.StringVal("ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDRHswWztFksNTJ3g2r3fDNr/Q4K5dGPxzswhtWWQivt4GlNgG5V6/+eVSknphJ5H9xfSaIv1mNFMCVhylK80k3UIqgO0A2gYlMBqES6jeqwFcfFpjszmFCs21uWR5PXRWGckGk/sUwJBmoNCxKfggwVGzRmcWjUgUUP6mhWHmMIM3eSc2adWUAAn9a4pMiP0SySw3isquHPY+cuyH/OcDQAH80YFENXoGbKCXx7iqMwsPaJm4YPy+DhT8dlHUH3HDzMGHtizCMqDRGLmeXcRYUdpS2I9Q/giOoVyglAcx1k5FcEh9hOQzIbdpTwaFjEuWwVEpHq7uMXAJW9HmTf6kUsB5VRquRJamQb1f4xfwPFxf9PCJPY507u6q4fHoVitzAPsj6nRTfLxkkgzPdaXT3/7bZ5GIxuXezxen41pZGBhRx8PsH0MMa7MYljwzP47WNcZU4tks4GGO16+ip5466ek0Uz7ywAiBi9W7zBzQx64/fv/jOWgDyoYCd+75xBjM= jers9@jerrish") does not match config value cty.StringVal("ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDRHswWztFksNTJ3g2r3fDNr/Q4K5dGPxzswhtWWQivt4GlNgG5V6/+eVSknphJ5H9xfSaIv1mNFMCVhylK80k3UIqgO0A2gYlMBqES6jeqwFcfFpjszmFCs21uWR5PXRWGckGk/sUwJBmoNCxKfggwVGzRmcWjUgUUP6mhWHmMIM3eSc2adWUAAn9a4pMiP0SySw3isquHPY+cuyH/OcDQAH80YFENXoGbKCXx7iqMwsPaJm4YPy+DhT8dlHUH3HDzMGHtizCMqDRGLmeXcRYUdpS2I9Q/giOoVyglAcx1k5FcEh9hOQzIbdpTwaFjEuWwVEpHq7uMXAJW9HmTf6kUsB5VRquRJamQb1f4xfwPFxf9PCJPY507u6q4fHoVitzAPsj6nRTfLxkkgzPdaXT3/7bZ5GIxuXezxen41pZGBhRx8PsH0MMa7MYljwzP47WNcZU4tks4GGO16+ip5466ek0Uz7ywAiBi9W7zBzQx64/fv/jOWgDyoYCd+75xBjM= jers9@jerrish\r\n")
+2023-02-04T18:42:52.695+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_vpc.demo_vpc, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .ipv6_netmask_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .assign_generated_ipv6_cidr_block: planned value cty.False for a non-computed attribute
+      - .enable_dns_support: planned value cty.True for a non-computed attribute
+      - .instance_tenancy: planned value cty.StringVal("default") for a non-computed attribute
+      - .ipv6_ipam_pool_id: planned value cty.StringVal("") for a non-computed attribute
+2023-02-04T18:42:52.878+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_subnet.demo_subnet1, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .assign_ipv6_address_on_creation: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_a_record_on_launch: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_aaaa_record_on_launch: planned value cty.False for a non-computed attribute
+      - .ipv6_native: planned value cty.False for a non-computed attribute
+      - .outpost_arn: planned value cty.StringVal("") for a non-computed attribute
+      - .customer_owned_ipv4_pool: planned value cty.StringVal("") for a non-computed attribute
+      - .enable_dns64: planned value cty.False for a non-computed attribute
+      - .ipv6_cidr_block: planned value cty.StringVal("") for a non-computed attribute
+      - .map_customer_owned_ip_on_launch: planned value cty.False for a non-computed attribute
+2023-02-04T18:42:52.974+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_subnet.demo_subnet2, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .ipv6_native: planned value cty.False for a non-computed attribute
+      - .outpost_arn: planned value cty.StringVal("") for a non-computed attribute
+      - .assign_ipv6_address_on_creation: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_a_record_on_launch: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_aaaa_record_on_launch: planned value cty.False for a non-computed attribute
+      - .enable_dns64: planned value cty.False for a non-computed attribute
+      - .ipv6_cidr_block: planned value cty.StringVal("") for a non-computed attribute
+      - .map_customer_owned_ip_on_launch: planned value cty.False for a non-computed attribute
+      - .customer_owned_ipv4_pool: planned value cty.StringVal("") for a non-computed attribute
+2023-02-04T18:42:52.981+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_default_route_table.demo_vpc_default_rt, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .propagating_vgws: planned value cty.SetValEmpty(cty.String) for a non-computed attribute
+2023-02-04T18:42:53.029+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_security_group.demo_sg, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .revoke_rules_on_delete: planned value cty.False for a non-computed attribute
+2023-02-04T18:42:53.392+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_db_subnet_group.demo_db_subnet_group, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .description: planned value cty.StringVal("Managed by Terraform") for a non-computed attribute
+2023-02-04T18:42:53.683+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_db_instance.demo_database, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .domain: planned value cty.StringVal("") for a non-computed attribute
+      - .iam_database_authentication_enabled: planned value cty.False for a non-computed attribute
+      - .publicly_accessible: planned value cty.False for a non-computed attribute
+      - .max_allocated_storage: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .custom_iam_instance_profile: planned value cty.StringVal("") for a non-computed attribute
+      - .replicate_source_db: planned value cty.StringVal("") for a non-computed attribute
+      - .customer_owned_ip_enabled: planned value cty.False for a non-computed attribute
+      - .tags: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .security_group_names: planned value cty.SetValEmpty(cty.String) for a non-computed attribute
+      - .storage_encrypted: planned value cty.False for a non-computed attribute
+      - .monitoring_interval: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .deletion_protection: planned value cty.False for a non-computed attribute
+      - .performance_insights_enabled: planned value cty.False for a non-computed attribute
+      - .copy_tags_to_snapshot: planned value cty.False for a non-computed attribute
+      - .delete_automated_backups: planned value cty.True for a non-computed attribute
+      - .domain_iam_role_name: planned value cty.StringVal("") for a non-computed attribute
+      - .auto_minor_version_upgrade: planned value cty.True for a non-computed attribute
+      - .enabled_cloudwatch_logs_exports: planned value cty.SetValEmpty(cty.String) for a non-computed attribute
+      - .apply_immediately: planned value cty.False for a non-computed attribute
+2023-02-04T18:42:54.183+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_instance.demo_instance, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .get_password_data: planned value cty.False for a non-computed attribute
+      - .user_data_replace_on_change: planned value cty.False for a non-computed attribute
+      - .hibernation: planned value cty.False for a non-computed attribute
+      - .source_dest_check: planned value cty.True for a non-computed attribute
+      - .root_block_device: block count in plan (1) disagrees with count in config (0)
+      - .enclave_options: block count in plan (1) disagrees with count in config (0)
+      - .maintenance_options: block count in plan (1) disagrees with count in config (0)
+      - .metadata_options: block count in plan (1) disagrees with count in config (0)
+      - .private_dns_name_options: block count in plan (1) disagrees with count in config (0)
+      - .capacity_reservation_specification: block count in plan (1) disagrees with count in config (0)
+      - .credit_specification: block count in plan (1) disagrees with count in config (0)
+2023-02-04T18:46:41.086+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_key_pair.demo_key, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .public_key: planned value cty.StringVal("ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDRHswWztFksNTJ3g2r3fDNr/Q4K5dGPxzswhtWWQivt4GlNgG5V6/+eVSknphJ5H9xfSaIv1mNFMCVhylK80k3UIqgO0A2gYlMBqES6jeqwFcfFpjszmFCs21uWR5PXRWGckGk/sUwJBmoNCxKfggwVGzRmcWjUgUUP6mhWHmMIM3eSc2adWUAAn9a4pMiP0SySw3isquHPY+cuyH/OcDQAH80YFENXoGbKCXx7iqMwsPaJm4YPy+DhT8dlHUH3HDzMGHtizCMqDRGLmeXcRYUdpS2I9Q/giOoVyglAcx1k5FcEh9hOQzIbdpTwaFjEuWwVEpHq7uMXAJW9HmTf6kUsB5VRquRJamQb1f4xfwPFxf9PCJPY507u6q4fHoVitzAPsj6nRTfLxkkgzPdaXT3/7bZ5GIxuXezxen41pZGBhRx8PsH0MMa7MYljwzP47WNcZU4tks4GGO16+ip5466ek0Uz7ywAiBi9W7zBzQx64/fv/jOWgDyoYCd+75xBjM= jers9@jerrish") does not match config value cty.StringVal("ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDRHswWztFksNTJ3g2r3fDNr/Q4K5dGPxzswhtWWQivt4GlNgG5V6/+eVSknphJ5H9xfSaIv1mNFMCVhylK80k3UIqgO0A2gYlMBqES6jeqwFcfFpjszmFCs21uWR5PXRWGckGk/sUwJBmoNCxKfggwVGzRmcWjUgUUP6mhWHmMIM3eSc2adWUAAn9a4pMiP0SySw3isquHPY+cuyH/OcDQAH80YFENXoGbKCXx7iqMwsPaJm4YPy+DhT8dlHUH3HDzMGHtizCMqDRGLmeXcRYUdpS2I9Q/giOoVyglAcx1k5FcEh9hOQzIbdpTwaFjEuWwVEpHq7uMXAJW9HmTf6kUsB5VRquRJamQb1f4xfwPFxf9PCJPY507u6q4fHoVitzAPsj6nRTfLxkkgzPdaXT3/7bZ5GIxuXezxen41pZGBhRx8PsH0MMa7MYljwzP47WNcZU4tks4GGO16+ip5466ek0Uz7ywAiBi9W7zBzQx64/fv/jOWgDyoYCd+75xBjM= jers9@jerrish\r\n")
+2023-02-04T18:46:42.502+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_vpc.demo_vpc, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .ipv6_netmask_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .instance_tenancy: planned value cty.StringVal("default") for a non-computed attribute
+      - .ipv6_ipam_pool_id: planned value cty.StringVal("") for a non-computed attribute
+      - .assign_generated_ipv6_cidr_block: planned value cty.False for a non-computed attribute
+      - .enable_dns_support: planned value cty.True for a non-computed attribute
+2023-02-04T18:46:42.703+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_subnet.demo_subnet2, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .assign_ipv6_address_on_creation: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_a_record_on_launch: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_aaaa_record_on_launch: planned value cty.False for a non-computed attribute
+      - .ipv6_native: planned value cty.False for a non-computed attribute
+      - .customer_owned_ipv4_pool: planned value cty.StringVal("") for a non-computed attribute
+      - .enable_dns64: planned value cty.False for a non-computed attribute
+      - .ipv6_cidr_block: planned value cty.StringVal("") for a non-computed attribute
+      - .map_customer_owned_ip_on_launch: planned value cty.False for a non-computed attribute
+      - .outpost_arn: planned value cty.StringVal("") for a non-computed attribute
+2023-02-04T18:46:42.783+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_default_route_table.demo_vpc_default_rt, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .propagating_vgws: planned value cty.SetValEmpty(cty.String) for a non-computed attribute
+2023-02-04T18:46:42.784+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_subnet.demo_subnet1, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .outpost_arn: planned value cty.StringVal("") for a non-computed attribute
+      - .enable_resource_name_dns_aaaa_record_on_launch: planned value cty.False for a non-computed attribute
+      - .ipv6_native: planned value cty.False for a non-computed attribute
+      - .assign_ipv6_address_on_creation: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_a_record_on_launch: planned value cty.False for a non-computed attribute
+      - .map_customer_owned_ip_on_launch: planned value cty.False for a non-computed attribute
+      - .customer_owned_ipv4_pool: planned value cty.StringVal("") for a non-computed attribute
+      - .enable_dns64: planned value cty.False for a non-computed attribute
+      - .ipv6_cidr_block: planned value cty.StringVal("") for a non-computed attribute
+2023-02-04T18:46:42.812+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_security_group.demo_sg, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .revoke_rules_on_delete: planned value cty.False for a non-computed attribute
+2023-02-04T18:46:43.209+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_db_subnet_group.demo_db_subnet_group, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .description: planned value cty.StringVal("Managed by Terraform") for a non-computed attribute
+2023-02-04T18:46:43.487+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_db_instance.demo_database, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .replicate_source_db: planned value cty.StringVal("") for a non-computed attribute
+      - .delete_automated_backups: planned value cty.True for a non-computed attribute
+      - .iam_database_authentication_enabled: planned value cty.False for a non-computed attribute
+      - .publicly_accessible: planned value cty.False for a non-computed attribute
+      - .storage_encrypted: planned value cty.False for a non-computed attribute
+      - .custom_iam_instance_profile: planned value cty.StringVal("") for a non-computed attribute
+      - .max_allocated_storage: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .tags: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .customer_owned_ip_enabled: planned value cty.False for a non-computed attribute
+      - .performance_insights_enabled: planned value cty.False for a non-computed attribute
+      - .monitoring_interval: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .domain: planned value cty.StringVal("") for a non-computed attribute
+      - .enabled_cloudwatch_logs_exports: planned value cty.SetValEmpty(cty.String) for a non-computed attribute
+      - .domain_iam_role_name: planned value cty.StringVal("") for a non-computed attribute
+      - .security_group_names: planned value cty.SetValEmpty(cty.String) for a non-computed attribute
+      - .copy_tags_to_snapshot: planned value cty.False for a non-computed attribute
+      - .apply_immediately: planned value cty.False for a non-computed attribute
+      - .auto_minor_version_upgrade: planned value cty.True for a non-computed attribute
+      - .deletion_protection: planned value cty.False for a non-computed attribute
+2023-02-04T18:46:44.068+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_instance.demo_instance, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .hibernation: planned value cty.False for a non-computed attribute
+      - .source_dest_check: planned value cty.True for a non-computed attribute
+      - .user_data_replace_on_change: planned value cty.False for a non-computed attribute
+      - .get_password_data: planned value cty.False for a non-computed attribute
+      - .private_dns_name_options: block count in plan (1) disagrees with count in config (0)
+      - .credit_specification: block count in plan (1) disagrees with count in config (0)
+      - .metadata_options: block count in plan (1) disagrees with count in config (0)
+      - .maintenance_options: block count in plan (1) disagrees with count in config (0)
+      - .root_block_device: block count in plan (1) disagrees with count in config (0)
+      - .capacity_reservation_specification: block count in plan (1) disagrees with count in config (0)
+      - .enclave_options: block count in plan (1) disagrees with count in config (0)
+2023-02-04T18:47:16.057+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_key_pair.demo_key, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .public_key: planned value cty.StringVal("ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDRHswWztFksNTJ3g2r3fDNr/Q4K5dGPxzswhtWWQivt4GlNgG5V6/+eVSknphJ5H9xfSaIv1mNFMCVhylK80k3UIqgO0A2gYlMBqES6jeqwFcfFpjszmFCs21uWR5PXRWGckGk/sUwJBmoNCxKfggwVGzRmcWjUgUUP6mhWHmMIM3eSc2adWUAAn9a4pMiP0SySw3isquHPY+cuyH/OcDQAH80YFENXoGbKCXx7iqMwsPaJm4YPy+DhT8dlHUH3HDzMGHtizCMqDRGLmeXcRYUdpS2I9Q/giOoVyglAcx1k5FcEh9hOQzIbdpTwaFjEuWwVEpHq7uMXAJW9HmTf6kUsB5VRquRJamQb1f4xfwPFxf9PCJPY507u6q4fHoVitzAPsj6nRTfLxkkgzPdaXT3/7bZ5GIxuXezxen41pZGBhRx8PsH0MMa7MYljwzP47WNcZU4tks4GGO16+ip5466ek0Uz7ywAiBi9W7zBzQx64/fv/jOWgDyoYCd+75xBjM= jers9@jerrish") does not match config value cty.StringVal("ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDRHswWztFksNTJ3g2r3fDNr/Q4K5dGPxzswhtWWQivt4GlNgG5V6/+eVSknphJ5H9xfSaIv1mNFMCVhylK80k3UIqgO0A2gYlMBqES6jeqwFcfFpjszmFCs21uWR5PXRWGckGk/sUwJBmoNCxKfggwVGzRmcWjUgUUP6mhWHmMIM3eSc2adWUAAn9a4pMiP0SySw3isquHPY+cuyH/OcDQAH80YFENXoGbKCXx7iqMwsPaJm4YPy+DhT8dlHUH3HDzMGHtizCMqDRGLmeXcRYUdpS2I9Q/giOoVyglAcx1k5FcEh9hOQzIbdpTwaFjEuWwVEpHq7uMXAJW9HmTf6kUsB5VRquRJamQb1f4xfwPFxf9PCJPY507u6q4fHoVitzAPsj6nRTfLxkkgzPdaXT3/7bZ5GIxuXezxen41pZGBhRx8PsH0MMa7MYljwzP47WNcZU4tks4GGO16+ip5466ek0Uz7ywAiBi9W7zBzQx64/fv/jOWgDyoYCd+75xBjM= jers9@jerrish\r\n")
+2023-02-04T18:47:17.558+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_vpc.demo_vpc, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .assign_generated_ipv6_cidr_block: planned value cty.False for a non-computed attribute
+      - .ipv6_ipam_pool_id: planned value cty.StringVal("") for a non-computed attribute
+      - .ipv6_netmask_length: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .instance_tenancy: planned value cty.StringVal("default") for a non-computed attribute
+      - .enable_dns_support: planned value cty.True for a non-computed attribute
+2023-02-04T18:47:17.781+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_subnet.demo_subnet1, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .customer_owned_ipv4_pool: planned value cty.StringVal("") for a non-computed attribute
+      - .enable_dns64: planned value cty.False for a non-computed attribute
+      - .ipv6_native: planned value cty.False for a non-computed attribute
+      - .assign_ipv6_address_on_creation: planned value cty.False for a non-computed attribute
+      - .outpost_arn: planned value cty.StringVal("") for a non-computed attribute
+      - .ipv6_cidr_block: planned value cty.StringVal("") for a non-computed attribute
+      - .map_customer_owned_ip_on_launch: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_a_record_on_launch: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_aaaa_record_on_launch: planned value cty.False for a non-computed attribute
+2023-02-04T18:47:17.820+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_subnet.demo_subnet2, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .enable_resource_name_dns_a_record_on_launch: planned value cty.False for a non-computed attribute
+      - .enable_resource_name_dns_aaaa_record_on_launch: planned value cty.False for a non-computed attribute
+      - .assign_ipv6_address_on_creation: planned value cty.False for a non-computed attribute
+      - .customer_owned_ipv4_pool: planned value cty.StringVal("") for a non-computed attribute
+      - .enable_dns64: planned value cty.False for a non-computed attribute
+      - .ipv6_native: planned value cty.False for a non-computed attribute
+      - .ipv6_cidr_block: planned value cty.StringVal("") for a non-computed attribute
+      - .map_customer_owned_ip_on_launch: planned value cty.False for a non-computed attribute
+      - .outpost_arn: planned value cty.StringVal("") for a non-computed attribute
+2023-02-04T18:47:17.840+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_default_route_table.demo_vpc_default_rt, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .propagating_vgws: planned value cty.SetValEmpty(cty.String) for a non-computed attribute
+2023-02-04T18:47:17.864+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_security_group.demo_sg, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .revoke_rules_on_delete: planned value cty.False for a non-computed attribute
+2023-02-04T18:47:18.245+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_db_subnet_group.demo_db_subnet_group, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .description: planned value cty.StringVal("Managed by Terraform") for a non-computed attribute
+2023-02-04T18:47:18.542+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_db_instance.demo_database, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .copy_tags_to_snapshot: planned value cty.False for a non-computed attribute
+      - .replicate_source_db: planned value cty.StringVal("") for a non-computed attribute
+      - .custom_iam_instance_profile: planned value cty.StringVal("") for a non-computed attribute
+      - .delete_automated_backups: planned value cty.True for a non-computed attribute
+      - .publicly_accessible: planned value cty.False for a non-computed attribute
+      - .performance_insights_enabled: planned value cty.False for a non-computed attribute
+      - .storage_encrypted: planned value cty.False for a non-computed attribute
+      - .auto_minor_version_upgrade: planned value cty.True for a non-computed attribute
+      - .apply_immediately: planned value cty.False for a non-computed attribute
+      - .customer_owned_ip_enabled: planned value cty.False for a non-computed attribute
+      - .deletion_protection: planned value cty.False for a non-computed attribute
+      - .domain: planned value cty.StringVal("") for a non-computed attribute
+      - .max_allocated_storage: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .security_group_names: planned value cty.SetValEmpty(cty.String) for a non-computed attribute
+      - .domain_iam_role_name: planned value cty.StringVal("") for a non-computed attribute
+      - .enabled_cloudwatch_logs_exports: planned value cty.SetValEmpty(cty.String) for a non-computed attribute
+      - .monitoring_interval: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .tags: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .iam_database_authentication_enabled: planned value cty.False for a non-computed attribute
+2023-02-04T18:47:18.973+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_instance.demo_instance, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .get_password_data: planned value cty.False for a non-computed attribute
+      - .user_data_replace_on_change: planned value cty.False for a non-computed attribute
+      - .hibernation: planned value cty.False for a non-computed attribute
+      - .source_dest_check: planned value cty.True for a non-computed attribute
+      - .credit_specification: block count in plan (1) disagrees with count in config (0)
+      - .maintenance_options: block count in plan (1) disagrees with count in config (0)
+      - .private_dns_name_options: block count in plan (1) disagrees with count in config (0)
+      - .root_block_device: block count in plan (1) disagrees with count in config (0)
+      - .capacity_reservation_specification: block count in plan (1) disagrees with count in config (0)
+      - .enclave_options: block count in plan (1) disagrees with count in config (0)
+      - .metadata_options: block count in plan (1) disagrees with count in config (0)
+2023-02-04T18:47:50.488+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_key_pair.demo_key, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .public_key: planned value cty.StringVal("ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDRHswWztFksNTJ3g2r3fDNr/Q4K5dGPxzswhtWWQivt4GlNgG5V6/+eVSknphJ5H9xfSaIv1mNFMCVhylK80k3UIqgO0A2gYlMBqES6jeqwFcfFpjszmFCs21uWR5PXRWGckGk/sUwJBmoNCxKfggwVGzRmcWjUgUUP6mhWHmMIM3eSc2adWUAAn9a4pMiP0SySw3isquHPY+cuyH/OcDQAH80YFENXoGbKCXx7iqMwsPaJm4YPy+DhT8dlHUH3HDzMGHtizCMqDRGLmeXcRYUdpS2I9Q/giOoVyglAcx1k5FcEh9hOQzIbdpTwaFjEuWwVEpHq7uMXAJW9HmTf6kUsB5VRquRJamQb1f4xfwPFxf9PCJPY507u6q4fHoVitzAPsj6nRTfLxkkgzPdaXT3/7bZ5GIxuXezxen41pZGBhRx8PsH0MMa7MYljwzP47WNcZU4tks4GGO16+ip5466ek0Uz7ywAiBi9W7zBzQx64/fv/jOWgDyoYCd+75xBjM= jers9@jerrish") does not match config value cty.StringVal("ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDRHswWztFksNTJ3g2r3fDNr/Q4K5dGPxzswhtWWQivt4GlNgG5V6/+eVSknphJ5H9xfSaIv1mNFMCVhylK80k3UIqgO0A2gYlMBqES6jeqwFcfFpjszmFCs21uWR5PXRWGckGk/sUwJBmoNCxKfggwVGzRmcWjUgUUP6mhWHmMIM3eSc2adWUAAn9a4pMiP0SySw3isquHPY+cuyH/OcDQAH80YFENXoGbKCXx7iqMwsPaJm4YPy+DhT8dlHUH3HDzMGHtizCMqDRGLmeXcRYUdpS2I9Q/giOoVyglAcx1k5FcEh9hOQzIbdpTwaFjEuWwVEpHq7uMXAJW9HmTf6kUsB5VRquRJamQb1f4xfwPFxf9PCJPY507u6q4fHoVitzAPsj6nRTfLxkkgzPdaXT3/7bZ5GIxuXezxen41pZGBhRx8PsH0MMa7MYljwzP47WNcZU4tks4GGO16+ip5466ek0Uz7ywAiBi9W7zBzQx64/fv/jOWgDyoYCd+75xBjM= jers9@jerrish\r\n")
+2023-02-04T18:47:50.829+0530 [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_instance.demo_instance, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .get_password_data: planned value cty.False for a non-computed attribute
+      - .user_data_replace_on_change: planned value cty.False for a non-computed attribute
+      - .source_dest_check: planned value cty.True for a non-computed attribute
+      - .maintenance_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .private_dns_name_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .root_block_device: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .enclave_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .ephemeral_block_device: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .metadata_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .network_interface: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .capacity_reservation_specification: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .ebs_block_device: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2023-02-04T18:48:22.595+0530 [WARN]  Provider "provider[\"registry.terraform.io/hashicorp/aws\"]" produced an unexpected new value for aws_instance.demo_instance, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .hibernation: was null, but now cty.False
+      - .credit_specification: block count changed from 0 to 1
